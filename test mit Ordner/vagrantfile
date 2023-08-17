@@ -1,0 +1,9 @@
+Vagrant.configure("2") do |config|
+    config.vm.box = "ubuntu/bionic64"  # Wähle eine Vagrant-Box aus dem Vagrant Cloud
+    config.vm.network "private_network", type: "dhcp"  # Konfiguriere ein privates Netzwerk
+  
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"  # Weise dem VM 1 GB RAM zu
+      vb.cpus = 2         # Nutze 2 CPU-Kerne
+    end
+  end
